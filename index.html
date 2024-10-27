@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feliz Día del Maquillaje</title>
+    <style>
+        /* Diseño general de la página */
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #fce4ec; /* Color de fondo rosado */
+        }
+
+        h1 {
+            font-size: 3.5em;
+            color: #c2185b;
+            opacity: 0;
+            transform: translateX(-100%); /* Inicia fuera de la pantalla a la izquierda */
+            animation: slideInTitle 2s forwards;
+        }
+
+        p {
+            font-size: 1.5em;
+            color: #6a1b9a;
+            opacity: 0;
+            transform: translateY(20px); /* Inicia un poco abajo */
+            animation: fadeInText 2s forwards;
+            animation-delay: 2s;
+            text-align: center;
+            margin: 0 400px;
+            text-align: justify;
+        }
+
+        /* Contenedor de imágenes en fila */
+        .image-container {
+            display: flex;
+            gap: 20px; /* Espacio entre las imágenes */
+            margin-top: 15px;
+        }
+
+        .image-container img {
+            width: 300px;
+            height: auto;
+            opacity: 0;
+            transform: translateY(100%); /* Inicia fuera de la pantalla en la parte inferior */
+            border-radius: 10px;
+        }
+
+        /* Primera imagen */
+        .image-container .first {
+            width: 150px;
+            height: auto;
+            animation: slideInImage 2s forwards;
+            animation-delay: 4s; /* La primera imagen aparece después del título y el párrafo */
+        }
+
+        /* Segunda imagen */
+        .image-container .second {
+            width: 150px;
+            height: auto;
+            animation: slideInImage 2s forwards;
+            animation-delay: 6s; /* La segunda imagen aparece después de la primera */
+        }
+
+        /* Animación de entrada del título */
+        @keyframes slideInTitle {
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        /* Animación de entrada del párrafo */
+        @keyframes fadeInText {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Animación de entrada de las imágenes */
+        @keyframes slideInImage {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Feliz Día del Maquillaje, mi amor</h1>
+    <p>Mi amor aqui esta tu regalo un poco tarde pero te lo juro hice
+         muchos sacrifios para darte ese regalo y 
+        espero te guste, lo disfrutes y lo valores mi niña te amo con mi vida.</p>
+    <div class="image-container">
+        <img src="sal.jpg" alt="Imagen especial" class="first">
+        <img src="Imagen de WhatsApp 2024-10-26 a las 18.57.40_3b9a9d8e.jpg" alt="Otra imagen especial" class="second">
+    </div>
+</body>
+</html>
